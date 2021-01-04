@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="53">
+	<author>loki_79</author>
+    <version>1.0.1.0</version>
+	<title>
+        <en>Bulk Buy</en>
+        <de>Großeinkauf</de>
+        <fr>Achat En Gros</fr>
+    </title>
+    <description>
+<en><![CDATA[This mod allows you to purchase up to ten pallets or big-bags from the shop in a single transaction.  Select the required amount before you purchase.  If there is not enough room to deliver the full amount, then you will only be charged for the items that you have received.
+
+Changelog:
+v1.0.1.0 - Prevent "configuration missing" warning when loading a save game that no longer uses this mod]]>
+</en>
+<de><![CDATA[Mit diesem Mod können Sie in einer einzigen Transaktion bis zu zehn Paletten oder Big-Bags im Geschäft kaufen.  Wählen Sie vor dem Kauf die gewünschte Menge aus.  Wenn der Platz nicht ausreicht, um den vollen Betrag zu liefern, werden Ihnen nur die Artikel berechnet, die Sie erhalten haben.
+
+Changelog:
+v1.0.1.0 - Warnung "Konfiguration fehlt" verhindern, wenn ein Spielstand geladen wird, der diese Mod nicht mehr verwendet]]>
+</de>
+<fr><![CDATA[Ce mode vous permet d'acheter jusqu'à dix palettes ou big-bags dans le magasin en une seule transaction.  Sélectionnez le montant requis avant d'acheter.  S'il n'y a pas assez de place pour livrer le montant total, vous ne serez facturé que pour les articles que vous avez reçus.
+
+Changelog:
+v1.0.1.0 - Prévention de l'avertissement "configuration manquante" lors du chargement d'une sauvegarde qui n'utilise plus ce mod]]>
+</fr>
+    </description>
+	
+	<multiplayer supported="true" />
+	<iconFilename>modIcon.dds</iconFilename>
+	<extraSourceFiles>
+		<sourceFile filename="BulkBuy.lua" />
+	</extraSourceFiles>
+
+	<l10n>
+		<text name="bulkBuy_messageNoSpace">
+			<en>Delivery space blocked!  Purchased</en>
+			<de>Anlieferplatz blockiert!  Gekauft</de>
+			<fr>Emplacement de livraison bloqué!  Acheté</fr>
+		</text>
+	</l10n>
+</modDesc>
