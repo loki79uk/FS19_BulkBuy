@@ -6,6 +6,7 @@
         <en>Bulk Buy</en>
         <de>Großeinkauf</de>
         <fr>Achat En Gros</fr>
+	<ru>Массовая покупка</ru>
     </title>
     <description>
 <en><![CDATA[This mod allows you to purchase up to ten pallets or big-bags from the shop in a single transaction.  Select the required amount before you purchase.  If there is not enough room to deliver the full amount, then you will only be charged for the items that you have received.
@@ -23,6 +24,11 @@ v1.0.1.0 - Warnung "Konfiguration fehlt" verhindern, wenn ein Spielstand geladen
 Changelog:
 v1.0.1.0 - Prévention de l'avertissement "configuration manquante" lors du chargement d'une sauvegarde qui n'utilise plus ce mod]]>
 </fr>
+<ru><![CDATA[Этот мод позволяет вам приобрести в магазине до десяти поддонов или биг-бегов за одну транзакцию. Перед покупкой выберите необходимое количество. Если для доставки всего количества недостаточно места, с вас будет взиматься плата только за полученные вами предметы.
+
+Changelog:
+v1.0.1.0 - Предотвращено предупреждение "configuration missing" при загрузке сохранённой игры, в которой этот мод больше не используется.]]>
+</ru>
     </description>
 	
 	<multiplayer supported="true" />
@@ -36,6 +42,7 @@ v1.0.1.0 - Prévention de l'avertissement "configuration manquante" lors du char
 			<en>Delivery space blocked!  Purchased</en>
 			<de>Anlieferplatz blockiert!  Gekauft</de>
 			<fr>Emplacement de livraison bloqué!  Acheté</fr>
+			<ru>Место доставки занято! Куплено</ru>
 		</text>
 	</l10n>
 </modDesc>
