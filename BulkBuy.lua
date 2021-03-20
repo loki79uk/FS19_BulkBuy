@@ -31,7 +31,7 @@ function BulkBuy:vehicleSaveToXMLFile(superFunc, xmlFile, key, usedModNames)
 	return superFunc(self, xmlFile, key, usedModNames)
 end
 function BulkBuy.shopConfigScreenSetStoreItem(self, storeItem, vehicle, configBasePrice)
-	if storeItem.categoryName == "PALLETS" or storeItem.categoryName == "BIGBAGS" then
+	if storeItem.categoryName == "PALLETS" or storeItem.categoryName == "BIGBAGS" or storeItem.categoryName == "IBCPALLETS" then
 		if storeItem.configurations[BulkBuy.configName] == nil then
 			-- create bulk buy configuration when created in shop
 			configurationItems = {}
@@ -73,7 +73,7 @@ function BulkBuy.shopConfigScreenGetConfigurationCostsAndChanges(self, superFunc
 		basePrice, upgradePrice = self.economyManager:getBuyPrice(storeItem, self.configurations)
 		basePrice = basePrice - upgradePrice
 		-- increase upgrade price for the multiple required
-		if storeItem.categoryName == "PALLETS" or storeItem.categoryName == "BIGBAGS" then
+		if storeItem.categoryName == "PALLETS" or storeItem.categoryName == "BIGBAGS" or storeItem.categoryName == "IBCPALLETS" then
 			if self.configurations.purchaseQuantity ~= nil then
 				upgradePrice = (self.configurations.purchaseQuantity-1) * basePrice
 			end
