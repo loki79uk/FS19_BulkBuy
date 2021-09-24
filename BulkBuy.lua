@@ -75,7 +75,8 @@ function BulkBuy.shopConfigScreenGetConfigurationCostsAndChanges(self, superFunc
 		-- increase upgrade price for the multiple required
 		if storeItem.categoryName == "PALLETS" or storeItem.categoryName == "BIGBAGS" or storeItem.categoryName == "IBCPALLETS" then
 			if self.configurations.purchaseQuantity ~= nil then
-				upgradePrice = (self.configurations.purchaseQuantity-1) * basePrice
+				local BulkBuyPrice = (self.configurations.purchaseQuantity-1) * basePrice
+				upgradePrice = (self.configurations.purchaseQuantity * upgradePrice) + BulkBuyPrice
 			end
 		end
 	end

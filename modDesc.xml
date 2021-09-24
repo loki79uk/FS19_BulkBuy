@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="53">
 	<author>loki_79</author>
-    <version>1.0.2.0</version>
+    <version>1.0.3.0</version>
 	<title>
         <en>Bulk Buy</en>
         <de>Großeinkauf</de>
@@ -13,25 +13,29 @@
 
 Changelog:
 v1.0.1.0 - Prevent "configuration missing" warning when loading a save game that no longer uses this mod
-v1.0.2.0 - Added IBCPALLETS for compatibility with the 'Tidy Shop' mod]]>
+v1.0.2.0 - Added IBCPALLETS for compatibility with the 'Tidy Shop' mod
+v1.0.3.0 - Resolved issue when pallets have additional configuration costs]]>
 </en>
 <de><![CDATA[Mit diesem Mod können Sie in einer einzigen Transaktion bis zu zehn Paletten oder Big-Bags im Geschäft kaufen.  Wählen Sie vor dem Kauf die gewünschte Menge aus.  Wenn der Platz nicht ausreicht, um den vollen Betrag zu liefern, werden Ihnen nur die Artikel berechnet, die Sie erhalten haben.
 
 Changelog:
 v1.0.1.0 - Warnung "Konfiguration fehlt" verhindern, wenn ein Spielstand geladen wird, der diese Mod nicht mehr verwendet
-v1.0.2.0 - IBCPALLETS für Kompatibilität mit dem 'Aufgeräumtes Geschäft'-Mod hinzugefügt]]>
+v1.0.2.0 - IBCPALLETS für Kompatibilität mit dem 'Aufgeräumtes Geschäft'-Mod hinzugefügt
+v1.0.3.0 - Problem behoben, wenn Paletten zusätzliche Konfigurationskosten haben]]>
 </de>
 <fr><![CDATA[Ce mode vous permet d'acheter jusqu'à dix palettes ou big-bags dans le magasin en une seule transaction.  Sélectionnez le montant requis avant d'acheter.  S'il n'y a pas assez de place pour livrer le montant total, vous ne serez facturé que pour les articles que vous avez reçus.
 
 Changelog:
 v1.0.1.0 - Prévention de l'avertissement "configuration manquante" lors du chargement d'une sauvegarde qui n'utilise plus ce mod
-v1.0.2.0 - Ajout de IBCPALLETS pour la compatibilité avec le mod 'Tidy Shop']]>
+v1.0.2.0 - Ajout de IBCPALLETS pour la compatibilité avec le mod 'Tidy Shop'
+v1.0.3.0 - Problème résolu lorsque les palettes ont des coûts de configuration supplémentaires]]>
 </fr>
 <ru><![CDATA[Этот мод позволяет вам приобрести в магазине до десяти поддонов или биг-бегов за одну транзакцию. Перед покупкой выберите необходимое количество. Если для доставки всего количества недостаточно места, с вас будет взиматься плата только за полученные вами предметы.
 
 Changelog:
 v1.0.1.0 - Предотвращено предупреждение "configuration missing" при загрузке сохранённой игры, в которой этот мод больше не используется
-v1.0.2.0 - Добавлены IBCPALLETS для совместимости с модом 'Опрятный магазин']]>
+v1.0.2.0 - Добавлены IBCPALLETS для совместимости с модом 'Опрятный магазин'
+v1.0.3.0 - Решена проблема, когда поддоны имеют дополнительные расходы на конфигурацию]]>
 </ru>
     </description>
 	
