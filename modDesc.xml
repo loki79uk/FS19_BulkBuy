@@ -7,6 +7,7 @@
         <de>Großeinkauf</de>
         <fr>Achat En Gros</fr>
 		<ru>Массовая покупка</ru>
+	<pl>Zakup Hurtowy</pl>
     </title>
     <description>
 <en><![CDATA[This mod allows you to purchase up to ten pallets or big-bags from the shop in a single transaction.  Select the required amount before you purchase.  If there is not enough room to deliver the full amount, then you will only be charged for the items that you have received.
@@ -37,7 +38,14 @@ v1.0.1.0 - Предотвращено предупреждение "configuratio
 v1.0.2.0 - Добавлены IBCPALLETS для совместимости с модом 'Опрятный магазин'
 v1.0.3.0 - Решена проблема, когда поддоны имеют дополнительные расходы на конфигурацию]]>
 </ru>
-    </description>
+<pl><![CDATA[Ten mod pozwala na zakup do dziesięciu palet albo big-bagów w sklepie jednocześnie. Ilość jest wybierana przed zakupem. Jeśli nie ma wystarczającej ilości miejsca by postawić wszystkie zakupy, zostanie naliczona opłata tylko za produkty które są dostarczone.
+
+Changelog:
+v1.0.1.0 - Usunięcie ostrzeżenia "configuration missing" przy ładowaniu zapisanej gry nie korzystającej już z tej modyfikacji
+v1.0.2.0 - Dodano IBCPALLETS dla zgodności z modem 'Tidy Shop' ]]>
+</pl>
+
+	</description>
 	
 	<multiplayer supported="true" />
 	<iconFilename>modIcon.dds</iconFilename>
@@ -51,6 +59,7 @@ v1.0.3.0 - Решена проблема, когда поддоны имеют �
 			<de>Anlieferplatz blockiert!  Gekauft</de>
 			<fr>Emplacement de livraison bloqué!  Acheté</fr>
 			<ru>Место доставки занято! Куплено</ru>
+			<pl>Brak miejsca na dostawę! Zakupiono</pl>
 		</text>
 	</l10n>
 </modDesc>
