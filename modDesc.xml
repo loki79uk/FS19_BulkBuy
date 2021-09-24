@@ -6,8 +6,8 @@
         <en>Bulk Buy</en>
         <de>Großeinkauf</de>
         <fr>Achat En Gros</fr>
-		<ru>Массовая покупка</ru>
-		<pl>Zakup Hurtowy</pl>
+        <ru>Массовая покупка</ru>
+        <pl>Zakup Hurtowy</pl>
     </title>
     <description>
 <en><![CDATA[This mod allows you to purchase up to ten pallets or big-bags from the shop in a single transaction.  Select the required amount before you purchase.  If there is not enough room to deliver the full amount, then you will only be charged for the items that you have received.
