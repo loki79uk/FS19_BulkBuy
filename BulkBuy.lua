@@ -51,6 +51,7 @@ function BulkBuy.shopConfigScreenSetConfigPrice(self, superFunc, configName, con
 	local price = (configIndex-1)*self.storeItem.price
 	priceTextElement:setText("+" .. self.l10n:formatMoney(price) .. "")
 	priceTextElement:setVisible(true)
+	BulkBuy.priceTextElement = priceTextElement
 end
 function BulkBuy.shopConfigScreenGetConfigurationCostsAndChanges(self, superFunc, storeItem, vehicle)
 	local basePrice = 0
@@ -75,8 +76,11 @@ function BulkBuy.shopConfigScreenGetConfigurationCostsAndChanges(self, superFunc
 		-- increase upgrade price for the multiple required
 		if storeItem.categoryName == "PALLETS" or storeItem.categoryName == "BIGBAGS" or storeItem.categoryName == "IBCPALLETS" then
 			if self.configurations.purchaseQuantity ~= nil then
-				local BulkBuyPrice = (self.configurations.purchaseQuantity-1) * basePrice
-				upgradePrice = (self.configurations.purchaseQuantity * upgradePrice) + BulkBuyPrice
+				local BulkBuyBasePrice = (self.configurations.purchaseQuantity-1) * basePrice
+				local BulkBuyTotalPrice = (self.configurations.purchaseQuantity-1) * (basePrice+upgradePrice)
+				upgradePrice = (self.configurations.purchaseQuantity * upgradePrice) + BulkBuyBasePrice
+				BulkBuy.priceTextElement:setText("+" .. self.l10n:formatMoney(BulkBuyTotalPrice) .. "")
+				BulkBuy.priceTextElement:setVisible(true)
 			end
 		end
 	end
