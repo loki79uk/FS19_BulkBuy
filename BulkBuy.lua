@@ -31,6 +31,7 @@ function BulkBuy:vehicleSaveToXMLFile(superFunc, xmlFile, key, usedModNames)
 	return superFunc(self, xmlFile, key, usedModNames)
 end
 function BulkBuy.shopConfigScreenSetStoreItem(self, storeItem, vehicle, configBasePrice)
+	--if vehicle == nil and storeItem.categoryName ~= "BALES" then
 	if storeItem.categoryName == "PALLETS" or storeItem.categoryName == "BIGBAGS" or storeItem.categoryName == "IBCPALLETS" then
 		if storeItem.configurations[BulkBuy.configName] == nil then
 			-- create bulk buy configuration when created in shop
@@ -74,13 +75,16 @@ function BulkBuy.shopConfigScreenGetConfigurationCostsAndChanges(self, superFunc
 		basePrice, upgradePrice = self.economyManager:getBuyPrice(storeItem, self.configurations)
 		basePrice = basePrice - upgradePrice
 		-- increase upgrade price for the multiple required
+		--if storeItem.categoryName ~= "BALES" then
 		if storeItem.categoryName == "PALLETS" or storeItem.categoryName == "BIGBAGS" or storeItem.categoryName == "IBCPALLETS" then
 			if self.configurations.purchaseQuantity ~= nil then
 				local BulkBuyBasePrice = (self.configurations.purchaseQuantity-1) * basePrice
 				local BulkBuyTotalPrice = (self.configurations.purchaseQuantity-1) * (basePrice+upgradePrice)
 				upgradePrice = (self.configurations.purchaseQuantity * upgradePrice) + BulkBuyBasePrice
-				BulkBuy.priceTextElement:setText("+" .. self.l10n:formatMoney(BulkBuyTotalPrice) .. "")
-				BulkBuy.priceTextElement:setVisible(true)
+				if BulkBuy.priceTextElement ~= nil then
+					BulkBuy.priceTextElement:setText("+" .. self.l10n:formatMoney(BulkBuyTotalPrice) .. "")
+					BulkBuy.priceTextElement:setVisible(true)
+				end
 			end
 		end
 	end
