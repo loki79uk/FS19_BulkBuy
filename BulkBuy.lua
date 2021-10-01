@@ -22,6 +22,18 @@ function BulkBuy:vehicleLoad(superFunc, vehicleData, asyncCallbackFunction, asyn
 	end
 	return superFunc(self, vehicleData, asyncCallbackFunction, asyncCallbackObject, asyncCallbackArguments)
 end
+function BulkBuy:getConfigurationsFromXML(superFunc, xmlFile, baseXMLName, baseDir, customEnvironment, isMod, storeItem)
+	configurations = superFunc(self, xmlFile, baseXMLName, baseDir, customEnvironment, isMod, storeItem)
+	-- add bulk buy configuration
+	if configurations[BulkBuy.configName] == nil then
+		local configurationItems = {}
+		for i = 1, 10 do
+			StoreItemUtil.addConfigurationItem(configurationItems, tostring(i), nil, 0, 0, false)
+		end
+		configurations[BulkBuy.configName] = configurationItems
+	end	
+	return configurations
+end
 function BulkBuy:vehicleSaveToXMLFile(superFunc, xmlFile, key, usedModNames)
 	if self.configurations[BulkBuy.configName] ~= nil then
 		-- remove bulk buy configuration before saving
@@ -136,6 +148,7 @@ function BulkBuy:loadMap(name)
 
 	Vehicle.load = Utils.overwrittenFunction(Vehicle.load, BulkBuy.vehicleLoad)
 	Vehicle.saveToXMLFile = Utils.overwrittenFunction(Vehicle.saveToXMLFile, BulkBuy.vehicleSaveToXMLFile)
+	StoreItemUtil.getConfigurationsFromXML = Utils.overwrittenFunction(StoreItemUtil.getConfigurationsFromXML, BulkBuy.getConfigurationsFromXML)
 	
 	ShopConfigScreen.setStoreItem = Utils.prependedFunction(ShopConfigScreen.setStoreItem, BulkBuy.shopConfigScreenSetStoreItem)
 	ShopConfigScreen.setConfigPrice = Utils.overwrittenFunction(ShopConfigScreen.setConfigPrice, BulkBuy.shopConfigScreenSetConfigPrice)
