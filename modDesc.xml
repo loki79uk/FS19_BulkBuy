@@ -8,6 +8,7 @@
         <fr>Achat En Gros</fr>
         <ru>Массовая покупка</ru>
         <pl>Zakup Hurtowy</pl>
+	<cz>Hromadný nákup</cz>	
     </title>
     <description>
 <en><![CDATA[This mod allows you to purchase up to ten pallets or big-bags from the shop in a single transaction.  Select the required amount before you purchase.  If there is not enough room to deliver the full amount, then you will only be charged for the items that you have received.
@@ -55,6 +56,15 @@ v1.0.3.0 - Naprawiony błąd wyświetlania cen, gdy przedmioty mają dodatkowe k
 v1.0.4.0 - Rozwiązany konflikt z "Systemem Obornika"
 ]]>
 </pl>
+<cz><![CDATA[Tento mod vám umožňuje zakoupit až deset palet nebo big-bagů z obchodu v jedné transakci. Před nákupem vyberte požadované množství. Pokud není dostatek místa pro doručení, budou vám účtovány pouze položky, které jste obdrželi.
+
+Seznam změn:
+v1.0.1.0 – Odstraněno varování „chybějící konfigurace“ při načítání uložené hry, která již tento mod nepoužívá
+v1.0.2.0 – Přidány IBCPALLETS pro kompatibilitu s modem „Tidy Shop“
+v1.0.3.0 - Vyřešena chyba zobrazení ceny, když položky mají další konfigurace
+v1.0.4.0 – Vyřešen konflikt s "Manure system"
+]]>
+</cz>	    
 
 	</description>
 	
@@ -71,6 +81,7 @@ v1.0.4.0 - Rozwiązany konflikt z "Systemem Obornika"
 			<fr>Emplacement de livraison bloqué!  Acheté</fr>
 			<ru>Место доставки занято! Куплено</ru>
 			<pl>Brak miejsca na dostawę! Zakupiono</pl>
+			<cz>Doručovací prostor je blokován! Zakoupeno</cz>
 		</text>
 	</l10n>
 </modDesc>
